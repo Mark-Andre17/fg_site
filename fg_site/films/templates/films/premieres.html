@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+{% for p in page_obj %}
+<p>{{ p.name }}<br><a href="{{ p.slug }}"><img src="{{ p.poster.url }}" width="280" height="420" alt="{{ p.name }}"></a></p>
+{% endfor %}
+<ul>
+    {% for p in page_obj.paginator.page_range %}
+        <li>
+            <a href="?page={{ p }}">{{ p }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+<ul>
+    {% for g in genres %}
+    <li><a href="{{ g.slug }}">{{ g.name }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>

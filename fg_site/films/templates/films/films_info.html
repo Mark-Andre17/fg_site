@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<h1>{{ films.name }}</h1>
+<p>Описание:<br>{{ films.description }}<br>Бюджет фильма: {{ films.budget }} $<br>
+    {% for p in films.producers.all %}
+    Режиссер: {{ p.name }}<br>
+    {% endfor %}
+    Aктеры:<br>
+    {% for a in films.actors.all %}
+    {{a.name}}<br>
+    {% endfor %}
+    Жанры:<br>
+    {% for g in films.genre.all %}
+    {{ g.name }}<br>
+    {% endfor %}</p>
+</body>
+</html>

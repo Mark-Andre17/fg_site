@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+    <h1>Главная страница + меню</h1>
+        {% for m in menu %}
+            <li class="courses-list-item"><a href="{{ m.url_name }}" class="course">{{ m.tittle }}</a></li>
+        {% endfor %}
+
+</body>
+</html>

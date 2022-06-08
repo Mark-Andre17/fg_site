@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<ul>
+    {% for p in platforms %}
+    <li><a href="{{ p.slug }}"><strong>{{ p.name }}</strong></a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
